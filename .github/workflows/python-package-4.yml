@@ -24,6 +24,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v6
+    - name: Set environment variables
+      with:
+        URL: ${{ env.URL }}
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
       with:
@@ -87,6 +90,9 @@ jobs:
     - name: Run python raw_tiktok.py --debug
       run: |
         python raw_tiktok.py --debug
+    - name: Run python raw_a.py --debug
+      run: |
+        python raw_a.py --debug
     - name: Upload screenshots
       uses: actions/upload-artifact@v6
       with:
