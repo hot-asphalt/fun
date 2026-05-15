@@ -23,9 +23,6 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     steps:
-    - name: My Task
-      env:
-         URL: ${{ env.URL }}
     - uses: actions/checkout@v6
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
