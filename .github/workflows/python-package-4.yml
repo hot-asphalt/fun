@@ -24,6 +24,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v6
+    - name: Set environment variables
+      with:
+        url: ${{ env.URL }}
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
       with:
