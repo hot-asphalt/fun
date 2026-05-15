@@ -25,9 +25,9 @@ jobs:
     steps:
     - shell: bash
       env:
-        URL: ${{ env.URL }}
+        URL: ${{ vars.URL }}
       run: |
-        example-command: "$URL"
+        echo "$URL"
     - uses: actions/checkout@v6
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v6
