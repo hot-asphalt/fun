@@ -17,6 +17,8 @@ with SB(uc=True, test=True, guest=True) as sb:
     title = sb.get_title()
     print("Title: ", title)
     sb.sleep(30)
+    title = sb.get_title()
+    print("Title: ", title)
     if ("challenge" in title.lower()):
         print("solving")
         solve_captcha(sb)
